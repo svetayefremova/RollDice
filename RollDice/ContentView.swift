@@ -9,8 +9,25 @@
 import SwiftUI
 
 struct ContentView: View {
+    @Environment(\.accessibilityDifferentiateWithoutColor) var differentiateWithoutColor
+    var dices = Dices()
+    
     var body: some View {
-        Text("Hello, World!")
+        TabView {
+            PlayView()
+                .tabItem {
+                    Image(systemName: "cube.fill").font(.title)
+                    Text("GAME").font(.title)
+                }
+            
+            ResultsView()
+                .tabItem {
+                    Image(systemName: "arrow.turn.right.up").font(.title)
+                    Text("HISTORY").font(.title)
+                }
+        }
+        .accentColor(differentiateWithoutColor ? Color.black.opacity(0.7) : Color.purple)
+        .environmentObject(dices)
     }
 }
 
