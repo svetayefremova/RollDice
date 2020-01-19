@@ -10,4 +10,8 @@ The app that helps users roll dice then store the results they got
 4. Add haptic feedback when dice are rolled.
 5. Make the value rolled by the dice flick through various possible values before settling on the final figure.
 
+## Impressions
+Here is a visual impression of how the mobile app and the UI looks like:
+
+
 ![](image.gif)
